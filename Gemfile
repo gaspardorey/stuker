@@ -43,3 +43,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem "font-awesome-rails"
 
 gem 'simple_form'
+
+gem 'devise'
