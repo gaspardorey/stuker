@@ -11,13 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151217230027) do
+ActiveRecord::Schema.define(version: 20151221232128) do
 
   create_table "connections", force: true do |t|
     t.string   "provider"
     t.string   "oauth_token"
     t.string   "secret"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", force: true do |t|
+    t.text     "content"
+    t.datetime "scheduled_at"
+    t.string   "state"
+    t.integer  "user_id"
+    t.boolean  "facebook"
+    t.boolean  "twitter"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
